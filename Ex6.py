@@ -3,7 +3,7 @@ def contar_vogais(texto):
     listaVogais = ["a","á","à","ã","â","e","é","ê","i","í","o","ó","ô","u"]
     nVogais = 0
     textoFormatado = texto.lower()
-    letrasTexto = textoFormatado.split()
+    letrasTexto = textoFormatado.strip()
     for i in range(len(letrasTexto)):
         for n in range(len(listaVogais)):
             if letrasTexto[i] == listaVogais[n]:
@@ -12,4 +12,4 @@ def contar_vogais(texto):
 
 print("==BEM VINDO AO CONTADOR DE VOGAIS NO TEXTO==")
 texto = input("Digite o texto: ")
-print(f"O texto '{texto} possui {contar_vogais(texto)}' vogais")
+print(f"O texto '{texto}' possui {contar_vogais(texto)} vogais")
